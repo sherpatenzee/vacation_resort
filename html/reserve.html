@@ -52,19 +52,23 @@
         Check in date :
         <input class="pickUp m-2" type="date" id="pickUpDate" name="pickUpDate" value="date" />
         <br />
+
         Number of nights :
-        <input type="number" id="numberOfDays" name="numberOfDays" value="1" min="1" max="28" /><br />
+        <input type="number" id="numberOfNights" name="numberOfDays" value="1" min="1" max="28" /><br />
       <br>
+
         <h6>Room Type</h6>
         <input type="radio" name="room" id="king" value="age" > King<br>
         <input type="radio" name="room" id="queen" value="age" checked > Queen<br>  
         <input type="radio" name="room" id="2bd" value="age"  > 2-Bedroom Suite<br>
         <br>
+
         Number of Adults:
-        <input type="number" id="numberOfDays" name="numberOfDays" value="1" min="1" max="4" />
+        <div id="occupancy">
+        <input type="number" id="adults" name="numberOfDays" value="1" min="1" max="4" />
         Number of Children:
-        <input type="number" id="numberOfDays" name="numberOfDays" value="0" min="0" max="4" /><br />
-        <br>
+        <input type="number" id="children" name="numberOfDays" value="0" min="0" max="4" /><br />
+        </div><br>
       
         <h6>Discount</h6>
         <input type="radio" name="dis" id="none" value="age" checked> None<br>
@@ -72,10 +76,9 @@
         <input type="radio" name="dis" id="military" value="age"  > Military(20%)<br>
         
         
+        <input class="estimateBtn mt-3 btn-outline-light " type="button" id="estimateBtn" name="estimate" value="Estimate Stay Cost" />
         
-        
-        <input class="estimateBtn mt-3" type="button" id="estimateBtn" name="estimate" value="Estimate Stay Cost" />
-        <div class="total m-5">
+        <div id="totalBox" class="total m-5">
           <h6 id="room">The original room cost:</h6>
           <h6 id="dis"> The discount:</h6>
           <h6 id="disRoom">Discounted room cost:</h6>
@@ -84,19 +87,19 @@
         </div>
       
       </div>
-      <button class="btn btn-outline-light" type="button">Reserve Now</button>
+      
     </div>
   </div>
 
 
 
 
-  <div class="col-md-6 img-fluid">
+  <div class="col-md-6  fluid">
     <div class="h-100 p-5 bg-light border rounded-3">
       <h2>Rooms and Suites</h2>
       <div class="container">
 
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-1">
+        <div class="row row-cols-1 row-cols-md-1 row-cols-md-3 g-1">
           <div class="col">
             <div class="card shadow-sm">
               <img src="../images/rooms/2-br-balcony-suite.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
@@ -201,26 +204,7 @@
   </div>
 </div>
 
- <div class="form">
-
-</div>
-
-
-<div class="bgImage"img-fluid>
-
-  
-
-
-
-
-
-
-
-    
-
-  
-
-    <script src="../scripts/reserve.css"></script>
+    <script src="../scripts/reserve.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 
