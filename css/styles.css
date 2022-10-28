@@ -1,0 +1,11 @@
+.body{
+  background-image:url(../images/4.jpg);
+  background-size: contain;
+  background-repeat:no-repeat ;
+  background-size: cover;
+  height: 50vh;
+}
+
+.roomImage{
+  height: 300px;
+}
