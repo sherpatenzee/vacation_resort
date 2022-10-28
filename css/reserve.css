@@ -1,0 +1,10 @@
+.bgImage{
+  background-image:url(../images/1.jpg) ;
+  background-repeat: no-repeat;
+  background-size:cover ;
+  opacity: 90%;
+}
+
+.row{
+  padding: 50px;
+}
