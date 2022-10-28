@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  //navbar
 <header>
   <nav class="navbar navbar-expand-sm bg-light">
     <div class="container-fluid">
@@ -36,6 +37,50 @@
     </div>
   </nav>
 </header>
+//form
+<div class="container-fluid">
+  <h1 class="heading pb-3">Reserve Rooms</h1>
+  Name :
+  <input class="name m-2" type="text" id="name" name="name" value=""/><br>
+  Email:
+  <input class="email m-2" type="text" id="email" name="email" value=""/><br>
+  Check in date :
+  <input class="pickUp m-2" type="date" id="pickUpDate" name="pickUpDate" value="date" />
+  <br />
+  Number of nights :
+  <input type="number" id="numberOfDays" name="numberOfDays" value="1" min="1" max="28" /><br />
+<br>
+  <h6>Room Type</h6>
+  <input type="radio" name="room" id="king" value="age" > King<br>
+  <input type="radio" name="room" id="queen" value="age" checked > Queen<br>  
+  <input type="radio" name="room" id="2bd" value="age"  > 2-Bedroom Suite<br>
+  <br>
+  Number of Adults:
+  <input type="number" id="numberOfDays" name="numberOfDays" value="1" min="1" max="4" />
+  Number of Children:
+  <input type="number" id="numberOfDays" name="numberOfDays" value="0" min="0" max="4" /><br />
+  <br>
+
+  <h6>Discount</h6>
+  <input type="radio" name="dis" id="none" value="age" checked> None<br>
+  <input type="radio" name="dis" id="senior" value="age"  > AAA/Senior(10%)<br>  
+  <input type="radio" name="dis" id="military" value="age"  > Military(20%)<br>
+  
+  
+  
+  
+  <input class="estimateBtn mt-3" type="button" id="estimateBtn" name="estimate" value="Estimate Stay Cost" />
+  <div class="total m-5">
+    <h6 id="room">The original room cost:</h6>
+    <h6 id="dis"> The discount:</h6>
+    <h6 id="disRoom">Discounted room cost:</h6>
+    <h6 id="tax">Tax:</h6><br>
+    <h6 id="total">Total:</h6>
+  </div>
+
+</div>
+
+//main
 <div class="bgImage"img-fluid>
 <section class="py-5 text-center container">
   <div class="row py-lg-5">
