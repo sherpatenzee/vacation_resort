@@ -8,3 +8,12 @@
 .row{
   padding: 50px;
 }
+.total{
+  border-style: groove;
+}
+
+.form{
+  border-style: solid;
+  text-align: center;
+
+}

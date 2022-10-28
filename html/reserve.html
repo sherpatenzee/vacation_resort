@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  //navbar
+ 
 <header>
   <nav class="navbar navbar-expand-sm bg-light">
     <div class="container-fluid">
@@ -37,163 +37,176 @@
     </div>
   </nav>
 </header>
-//form
-<div class="container-fluid">
-  <h1 class="heading pb-3">Reserve Rooms</h1>
-  Name :
-  <input class="name m-2" type="text" id="name" name="name" value=""/><br>
-  Email:
-  <input class="email m-2" type="text" id="email" name="email" value=""/><br>
-  Check in date :
-  <input class="pickUp m-2" type="date" id="pickUpDate" name="pickUpDate" value="date" />
-  <br />
-  Number of nights :
-  <input type="number" id="numberOfDays" name="numberOfDays" value="1" min="1" max="28" /><br />
-<br>
-  <h6>Room Type</h6>
-  <input type="radio" name="room" id="king" value="age" > King<br>
-  <input type="radio" name="room" id="queen" value="age" checked > Queen<br>  
-  <input type="radio" name="room" id="2bd" value="age"  > 2-Bedroom Suite<br>
-  <br>
-  Number of Adults:
-  <input type="number" id="numberOfDays" name="numberOfDays" value="1" min="1" max="4" />
-  Number of Children:
-  <input type="number" id="numberOfDays" name="numberOfDays" value="0" min="0" max="4" /><br />
-  <br>
-
-  <h6>Discount</h6>
-  <input type="radio" name="dis" id="none" value="age" checked> None<br>
-  <input type="radio" name="dis" id="senior" value="age"  > AAA/Senior(10%)<br>  
-  <input type="radio" name="dis" id="military" value="age"  > Military(20%)<br>
-  
-  
-  
-  
-  <input class="estimateBtn mt-3" type="button" id="estimateBtn" name="estimate" value="Estimate Stay Cost" />
-  <div class="total m-5">
-    <h6 id="room">The original room cost:</h6>
-    <h6 id="dis"> The discount:</h6>
-    <h6 id="disRoom">Discounted room cost:</h6>
-    <h6 id="tax">Tax:</h6><br>
-    <h6 id="total">Total:</h6>
+<div class="row align-items-md-stretch">
+  <div class="col-md-6">
+    <div class="h-100 p-5 text-bg-dark rounded-3">
+      <h2>The Resort</h2>
+      <div class="container1-fluid">
+        <h1 class="heading pb-3">Reserve Rooms</h1>
+        Name :
+        <input class="name m-2" type="text" id="name" name="name" value=""/><br>
+        Email:
+        <input class="email m-2" type="text" id="email" name="email" value=""/><br>
+        Check in date :
+        <input class="pickUp m-2" type="date" id="pickUpDate" name="pickUpDate" value="date" />
+        <br />
+        Number of nights :
+        <input type="number" id="numberOfDays" name="numberOfDays" value="1" min="1" max="28" /><br />
+      <br>
+        <h6>Room Type</h6>
+        <input type="radio" name="room" id="king" value="age" > King<br>
+        <input type="radio" name="room" id="queen" value="age" checked > Queen<br>  
+        <input type="radio" name="room" id="2bd" value="age"  > 2-Bedroom Suite<br>
+        <br>
+        Number of Adults:
+        <input type="number" id="numberOfDays" name="numberOfDays" value="1" min="1" max="4" />
+        Number of Children:
+        <input type="number" id="numberOfDays" name="numberOfDays" value="0" min="0" max="4" /><br />
+        <br>
+      
+        <h6>Discount</h6>
+        <input type="radio" name="dis" id="none" value="age" checked> None<br>
+        <input type="radio" name="dis" id="senior" value="age"  > AAA/Senior(10%)<br>  
+        <input type="radio" name="dis" id="military" value="age"  > Military(20%)<br>
+        
+        
+        
+        
+        <input class="estimateBtn mt-3" type="button" id="estimateBtn" name="estimate" value="Estimate Stay Cost" />
+        <div class="total m-5">
+          <h6 id="room">The original room cost:</h6>
+          <h6 id="dis"> The discount:</h6>
+          <h6 id="disRoom">Discounted room cost:</h6>
+          <h6 id="tax">Tax:</h6><br>
+          <h6 id="total">Total:</h6>
+        </div>
+      
+      </div>
+      <button class="btn btn-outline-light" type="button">Reserve Now</button>
+    </div>
   </div>
+  <div class="col-md-6 img-fluid">
+    <div class="h-100 p-5 bg-light border rounded-3">
+      <h2>Rooms and Suites</h2>
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-1">
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="../images/rooms/2-br-balcony-suite.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+      
+              <div class="card-body">
+                <p class="card-text">2 Bedroom Balcony Suite.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-groupfluid">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="../images/rooms/deluxe-room1.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+      
+              <div class="card-body">
+                <p class="card-text">Delux Room</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-groupfluid">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="../images/rooms/deluxe-suite.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+      
+              <div class="card-body">
+                <p class="card-text">Delux Suite</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-groupfluid">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="../images/rooms/garden-club-chalet.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+      
+              <div class="card-body">
+                <p class="card-text">Garden Club Suite</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-groupfluid">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="../images/rooms/junior-suite.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+      
+              <div class="card-body">
+                <p class="card-text">Junior Suite</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-groupfluid">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+      
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="../images/rooms/presidential-suite.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
+      
+              <div class="card-body">
+                <p class="card-text">Presidential Suite</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-groupfluid">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <div class="form">
 
 </div>
 
-//main
+
 <div class="bgImage"img-fluid>
-<section class="py-5 text-center container">
-  <div class="row py-lg-5">
-    <div class="col-lg-6 col-md-8 mx-auto">
-      <h1 class="fw-light fw-bold text-white-50">Rooms & Suites</h1>
-    </div>
-  </div>
-</section>
 
-<div class="container">
-
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="../images/rooms/2-br-balcony-suite.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
-
-        <div class="card-body">
-          <p class="card-text">2 Bedroom Balcony Suite.</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="../images/rooms/deluxe-room1.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
-
-        <div class="card-body">
-          <p class="card-text">Delux Room</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="../images/rooms/deluxe-suite.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
-
-        <div class="card-body">
-          <p class="card-text">Delux Suite</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  
 
 
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="../images/rooms/garden-club-chalet.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
-
-        <div class="card-body">
-          <p class="card-text">Garden Club Suite</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="../images/rooms/junior-suite.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
-
-        <div class="card-body">
-          <p class="card-text">Junior Suite</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col">
-      <div class="card shadow-sm">
-        <img src="../images/rooms/presidential-suite.jpg" alt="" width="100%" height="225" xmlns="image" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect>
-
-        <div class="card-body">
-          <p class="card-text">Presidential Suite</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
-              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Reserve</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 
 
 
