@@ -4,47 +4,74 @@
 window.onload = function () {
   const btn = document.getElementById("estimateBtn");
   btn.onclick = totalCost;
-  let targetDiv = document.getElementById("totalBox");
-  if (targetDiv.style.display !== "none") {
-    targetDiv.style.display = "none";
-  }
-};
+
+  document.getElementById("totalBox").style.display = "none";
+
+}
 
 function totalCost() {
+
+  document.getElementById("totalBox").style.display = "block";
 
   let numbers = document.getElementById("numberOfNights");
   let nights = numbers.value;
 
   
+//max occupancy
+ let adultOccupancy = document.getElementById("adults");
+  let adult = Number(adultOccupancy.value);
+  let childOccupancy = document.getElementById("children");
+  let children = Number(childOccupancy.value);
+  let totalOccupancy = adult + children;
 
-//  let adultOccupancy = document.getElementById("adult");
-//   let adult =adultOccupancy.value;
-//   let childOccupancy = document.getElementById("children");
-//   let children = childOccupancy.value;
 
-//   let totalOccupancy = adult + children;
 
-    const months = ["January", "February", "March", "April",
-                "May", "June", "July", "August", "September",
-                "October", "November", "December"];
-    // let d = new Date();
-    // let monthName = months[d.getMonth()];
-
+  
 
   let king = document.getElementById("king");
   let queen = document.getElementById("queen");
-  let suite = document.getElementById("2bd");
+  let suite = document.getElementById("twoBedroom");
+  let months = new Date(document.getElementById("pickUpDate").value).getMonth();
+  let timeOfYear = months == 5 || months == 6 || months == 7 ;
+  
+
   
   let charge = 0;
+
   if (king.checked ) {
-    charge = 150;
+
+      if(timeOfYear && totalOccupancy <= 5){
+          charge = 250;
+      }
+      else{
+          charge = 150
+      }
+
   }
-  else if (queen.checked ) {
-    charge = 150;
-  }
-  else if (suite.checked ) {
+
+  else if (queen.checked) {
+
+     if (timeOfYear && totalOccupancy <= 2){
+      charge = 250;
+    }
+   else {
+      charge = 150;
+    }
+}
+  else if (suite.checked){
+
+    
+    if(timeOfYear && totalOccupancy <= 6 ){
+    charge = 350;
+    }
+    else{
     charge = 210;
+    }
   }
+  
+
+
+   
 //original room cost
   let total = nights * charge;
   let roomCost = document.getElementById("room");
@@ -85,20 +112,12 @@ function totalCost() {
 
   let allTotal = discountedRoomCost + tax;
   let tot = document.getElementById("total");
-  tot.innerHTML = "The total cost of the stay : $" + allTotal.toFixed(2);  
+  tot.innerHTML = "The total cost of the stay : $" + allTotal.toFixed (2) ;
   
 
-  //hide/show total
-  let targetDiv = document.getElementById("totalBox");
-  if (targetDiv.style.display == "none") {
-    targetDiv.style.display = "block";
-  } 
-  
+
 
 
   return totalCost;
 
 }
-
-
-
