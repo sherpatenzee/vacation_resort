@@ -6,6 +6,8 @@ window.onload = function () {
   btn.onclick = totalCost;
 
   document.getElementById("totalBox").style.display = "none";
+  document.getElementById("message").style.display = "none";
+
 
 }
 
@@ -16,81 +18,102 @@ function totalCost() {
   let numbers = document.getElementById("numberOfNights");
   let nights = numbers.value;
 
-  
-//max occupancy
- let adultOccupancy = document.getElementById("adults");
+
+  //max occupancy
+  let adultOccupancy = document.getElementById("adults");
   let adult = Number(adultOccupancy.value);
   let childOccupancy = document.getElementById("children");
   let children = Number(childOccupancy.value);
   let totalOccupancy = adult + children;
+  let messageDiv = document.getElementById("message")
 
-
-
-  
 
   let king = document.getElementById("king");
   let queen = document.getElementById("queen");
   let suite = document.getElementById("twoBedroom");
   let months = new Date(document.getElementById("pickUpDate").value).getMonth();
-  let timeOfYear = months == 5 || months == 6 || months == 7 ;
-  
+  let timeOfYear = months == 5 || months == 6 || months == 7;
 
-  
+  if (king.checked && totalOccupancy > 2) {
+
+    document.getElementById("totalBox").style.display = "none";
+    messageDiv.style.display = "block";
+    messageDiv.innerHTML = "The room you selected will not hold your party"
+
+  }
+  else if (queen.checked && totalOccupancy > 5) {
+    document.getElementById("totalBox").style.display = "none";
+    messageDiv.style.display = "block";
+    messageDiv.innerHTML = "The room you selected will not hold your party"
+  }
+  else if (suite.checked && totalOccupancy > 6) {
+    document.getElementById("totalBox").style.display = "none";
+    messageDiv.style.display = "block";
+    messageDiv.innerHTML = "The room you selected will not hold your party"
+  }
+  else {
+    messageDiv.style.display = "none";
+  }
+
+
+
+
+
+
+
+  //nested if for checking rates for different months.
   let charge = 0;
 
-  if (king.checked ) {
+  if (king.checked) {
 
-      if(timeOfYear && totalOccupancy <= 5){
-          charge = 250;
-      }
-      else{
-          charge = 150
-      }
+    if (timeOfYear) {
+      charge = 250;
+    }
+    else {
+      charge = 150
+    }
 
   }
 
   else if (queen.checked) {
 
-     if (timeOfYear && totalOccupancy <= 2){
+    if (timeOfYear) {
       charge = 250;
     }
-   else {
+    else {
       charge = 150;
     }
-}
-  else if (suite.checked){
+  }
+  else if (suite.checked) {
 
-    
-    if(timeOfYear && totalOccupancy <= 6 ){
-    charge = 350;
+
+    if (timeOfYear) {
+      charge = 350;
     }
-    else{
-    charge = 210;
+    else {
+      charge = 210;
     }
   }
-  
 
-
-   
-//original room cost
+  //original room cost
   let total = nights * charge;
   let roomCost = document.getElementById("room");
-  roomCost.innerHTML= "The original room cost : $" + total;
+  roomCost.innerHTML = "The original room cost : $" + total;
 
-//dicount cost
+  //dicount cost
   let none = document.getElementById("none");
   let senior = document.getElementById("senior");
   let military = document.getElementById("military");
 
   let discount = 0;
-  if (none.checked ) {
-      discount = 0;
+  if (none.checked) {
+    discount = 0;
   }
-    else if (senior.checked ) {
-      discount = .10 * total;
+  else if (senior.checked) {
+    discount = .10 * total;
   }
-    else if (military.checked ) {
-     discount = .20 * total;
+  else if (military.checked) {
+    discount = .20 * total;
   }
 
   let finalDiscount = document.getElementById("dis");
@@ -112,8 +135,8 @@ function totalCost() {
 
   let allTotal = discountedRoomCost + tax;
   let tot = document.getElementById("total");
-  tot.innerHTML = "The total cost of the stay : $" + allTotal.toFixed (2) ;
-  
+  tot.innerHTML = "The total cost of the stay : $" + allTotal.toFixed(2);
+
 
 
 
